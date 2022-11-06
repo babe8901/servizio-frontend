@@ -5,7 +5,7 @@ import Home from "./Home";
 import Login from "./Login";
 import DeactivateModal from "./DeactivateModal";
 import LoginSuccessModal from "./LoginSuccessModal";
-import ApplyLoan from "./ApplyLoan";
+import ApplyService from "./ApplyService";
 import Header from "./Header";
 import Register from "./Register";
 import RegisterSuccessModal from "./RegisterSuccessModal";
@@ -29,7 +29,7 @@ const Main = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/deactivate-modal' element={<DeactivateModal />} />
       <Route path='/login-success' element={<LoginSuccessModal />} />
-      <Route path='/apply-loan' element={<ApplyLoan />} />
+      <Route path='/apply-service' element={<ApplyService />} />
       <Route path='/header' element={<Header />} />
       <Route path='/register' element={<Register />} />
       <Route path='/register-success' element={<RegisterSuccessModal />} />
