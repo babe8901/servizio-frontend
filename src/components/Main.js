@@ -5,20 +5,19 @@ import Home from "./Home";
 import Login from "./Login";
 import DeactivateModal from "./DeactivateModal";
 import LoginSuccessModal from "./LoginSuccessModal";
-import ApplyService from "./ApplyService";
 import Header from "./Header";
 import Register from "./Register";
 import RegisterSuccessModal from "./RegisterSuccessModal";
-import MarketPlace from "./MarketPlace";
 import Company from "./Company";
 import Features from "./Features";
-import Services from "./Services";
-import CropPreview from "./CropPreview";
-import CropModal from "./CropModal";
+import ServicePreview from "./CropPreview";
+import ServiceModal from "./ServiceModal";
 import PersonalInfoSavedModal from "./PersonalInfoSavedModal";
 import DetailsSavedModal from "./DetailsSavedModal";
 import DocumentsUploadedModal from "./DocumentsUploadedModal";
 import NotificationPreferencesSavedModal from "./NotificationPreferencesSavedModal";
+import Join from "./Join";
+import Services from "./Services";
 
 const Main = () => {
   return (
@@ -29,16 +28,16 @@ const Main = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/deactivate-modal' element={<DeactivateModal />} />
       <Route path='/login-success' element={<LoginSuccessModal />} />
-      <Route path='/apply-service' element={<ApplyService />} />
+      {/* <Route path='/apply-service' element={<ApplyService />} /> */}
       <Route path='/header' element={<Header />} />
       <Route path='/register' element={<Register />} />
       <Route path='/register-success' element={<RegisterSuccessModal />} />
       <Route path='/company' element={<Company />} />
-      <Route path='/marketplace' element={<MarketPlace />} />
-      <Route path='/features' element={<Features />} />
       <Route path='/services' element={<Services />} />
-      <Route path='/marketplace/crop-preview' element={<CropPreview />} />
-      <Route path='/marketplace/crop-modal' element={<CropModal />} />
+      <Route path='/features' element={<Features />} />
+      <Route path='/join' element={<Join />} />
+      <Route path='/services/service-preview' element={<ServicePreview />} />
+      <Route path='/services/service-modal' element={<ServiceModal />} />
       <Route
         path='/services/personal-info-saved'
         element={<PersonalInfoSavedModal />}
@@ -51,10 +50,7 @@ const Main = () => {
         path='/services/notification-preferences-saved'
         element={<NotificationPreferencesSavedModal />}
       />
-      <Route
-        path='/marketplace/details-saved'
-        element={<DetailsSavedModal />}
-      />
+      <Route path='/services/details-saved' element={<DetailsSavedModal />} />
     </Routes>
   );
 };

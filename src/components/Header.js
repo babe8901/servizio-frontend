@@ -4,10 +4,10 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 
 const navigation = [
+  { name: "Join Us", href: "/join" },
+  { name: "Features", href: "/features" },
   { name: "Services", href: "/services" },
-  { name: "Features", href: "features" },
-  { name: "Marketplace", href: "marketplace" },
-  { name: "Company", href: "company" },
+  { name: "Company", href: "/company" },
 ];
 
 export default function Header() {
@@ -64,7 +64,7 @@ export default function Header() {
                     <Link to='/login'>
                       <a
                         href=''
-                        className='font-medium text-indigo-600 hover:text-indigo-500'
+                        className='font-medium text-gray-500 hover:text-white'
                       >
                         Log in
                       </a>
@@ -116,7 +116,7 @@ export default function Header() {
                     <Link to='/login'>
                       <a
                         href='#'
-                        className='block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100'
+                        className='block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'
                       >
                         Log in
                       </a>

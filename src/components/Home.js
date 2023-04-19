@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
 const navigation = [
-  { name: "Services", href: "/services" },
+  { name: "Join Us", href: "/join" },
   { name: "Features", href: "/features" },
-  { name: "Marketplace", href: "/marketplace" },
+  { name: "Services", href: "/services" },
   { name: "Company", href: "/company" },
   { name: "Log in", href: "/login" },
 ];
