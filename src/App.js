@@ -1,8 +1,9 @@
-import Main from "./components/Main"
+import Main from "./components/Main";
+import React from "react";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Main />
     </div>
   );

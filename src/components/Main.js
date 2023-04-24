@@ -18,6 +18,8 @@ import DocumentsUploadedModal from "./DocumentsUploadedModal";
 import NotificationPreferencesSavedModal from "./NotificationPreferencesSavedModal";
 import Join from "./Join";
 import Services from "./Services";
+import DateTimePicker from "./DateTimePicker";
+import PaymentForm from "./PaymentForm";
 
 const Main = () => {
   return (
@@ -51,6 +53,8 @@ const Main = () => {
         element={<NotificationPreferencesSavedModal />}
       />
       <Route path='/services/details-saved' element={<DetailsSavedModal />} />
+      <Route path='/datetime' element={<DateTimePicker />} />
+      <Route path='/payment' element={<PaymentForm />} />
     </Routes>
   );
 };
