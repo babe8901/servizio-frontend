@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { InformationCircleIcon } from "@heroicons/react/outline";
 import { LockClosedIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import DateTimePicker from "./DateTimePicker";
 
 export default function Modal() {
   const [open, setOpen] = useState(true);
@@ -46,7 +47,7 @@ export default function Modal() {
             leaveFrom='opacity-100 translate-y-0 sm:scale-100'
             leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
           >
-            <div className='relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full'>
+            <div className='relative inline-block align-bottom bg-white rounded-lg text-left overflow-visible shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full'>
               <div className='bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
                 <div className='sm:flex sm:items-start'>
                   <div className='mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10'>
@@ -74,34 +75,7 @@ export default function Modal() {
                           defaultValue='true'
                         />
                         <div className='rounded-md shadow-sm -space-y-px'>
-                          <div className='py-1'>
-                            <label htmlFor='quantity' className='sr-only'>
-                              Quantity
-                            </label>
-                            <input
-                              id='quantity'
-                              name='quantity'
-                              type='number'
-                              autoComplete='quantity'
-                              required
-                              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
-                              placeholder='Quantity'
-                            />
-                          </div>
-                          <div className='py-1'>
-                            <label htmlFor='password' className='sr-only'>
-                              Rate
-                            </label>
-                            <input
-                              id='rate'
-                              name='rate'
-                              type='number'
-                              autoComplete='current-rate'
-                              required
-                              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
-                              placeholder='rate'
-                            />
-                          </div>
+                          <DateTimePicker />
                         </div>
 
                         <div>
@@ -127,7 +101,7 @@ export default function Modal() {
                 <Link to='/services'>
                   <button
                     type='button'
-                    className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
+                    className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
                     onClick={() => setOpen(false)}
                     ref={cancelButtonRef}
                   >

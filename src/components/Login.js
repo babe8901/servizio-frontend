@@ -22,7 +22,7 @@ export default function Login() {
           </div>
           <form
             className='mt-8 space-y-6'
-            action='http://localhost:5000/api/auth/login'
+            action='http://localhost:5000/api/v1/auth/login'
             method='POST'
           >
             <input type='hidden' name='remember' defaultValue='true' />

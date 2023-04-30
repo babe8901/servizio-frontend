@@ -19,7 +19,14 @@ import NotificationPreferencesSavedModal from "./NotificationPreferencesSavedMod
 import Join from "./Join";
 import Services from "./Services";
 import DateTimePicker from "./DateTimePicker";
+
 import PaymentForm from "./PaymentForm";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
+
+const stripePromise = loadStripe(
+  "pk_live_51N0IOMSAGipLpr8Zpc6pQHcucL5TI7QDibi1kAtIucpLgcI0TlDYG139eBmMWkf0NHVOnblergptIWTWj2YZu4rY001Hkk6tTB"
+);
 
 const Main = () => {
   return (
@@ -54,7 +61,14 @@ const Main = () => {
       />
       <Route path='/services/details-saved' element={<DetailsSavedModal />} />
       <Route path='/datetime' element={<DateTimePicker />} />
-      <Route path='/payment' element={<PaymentForm />} />
+      <Route
+        path='/payment'
+        element={
+          <Elements stripe={stripePromise}>
+            <PaymentForm />
+          </Elements>
+        }
+      />
     </Routes>
   );
 };
