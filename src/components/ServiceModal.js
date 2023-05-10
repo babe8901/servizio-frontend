@@ -66,7 +66,7 @@ export default function Modal() {
                     <div className='mt-2'>
                       <form
                         className='mt-8 space-y-6'
-                        action='http://localhost:5000/api/auth/sell-crop'
+                        action='http://localhost:5000/api/v1/orders'
                         method='POST'
                       >
                         <input
